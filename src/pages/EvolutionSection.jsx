@@ -24,31 +24,50 @@ const evolutionItems = [
 
 const EvolutionSection = () => {
   return (
-    <div 
-      className=" py-10 " 
-      style={{
-        backgroundImage: 'url("/src/assets/images/11.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">Notre histoire</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {evolutionItems.map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img className="w-full h-64 object-cover" src={item.image} alt={item.title} />
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">{item.year}</h3>
-                <h4 className="text-xl font-semibold text-gray-600 mb-2">{item.title}</h4>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+		<div
+			className='w-full h-fit bg-black py-5 px-6'
+			// style={{
+			// 	backgroundImage: 'url("/src/assets/images/11.jpg")',
+			// 	backgroundSize: "cover",
+			// 	backgroundPosition: "center",
+			// }}
+		>
+			<h2 className='text-4xl font-bold text-center text-white mb-10'>
+				Notre histoire
+			</h2>
+			<div className='grid grid-cols-3 gap-5 w-full'>
+				{evolutionItems.map((item, index) => (
+						<div className=' relative   w-[33.33] p-[1px] ' key={index}>
+							<img
+								className='w-full h-64 object-cover'
+								src={item.image}
+								alt={item.title}
+							/>
+							<div className='p-6'>
+								<h3 className='text-2xl font-bold text-gray-800 '>
+									{item.year}
+								</h3>
+								<h4 className='text-xl font-semibold text-gray-600 '>
+									{item.title}
+								</h4>
+								<p className='text-gray-600'>{item.description}</p>
+							</div>
+						</div>
+				))}
+			</div>
+			{/* <div className='container mx-auto px-4 bg-black'>
+				<h2 className='text-4xl font-bold text-center text-gray-800 mb-10'>
+					Notre histoire
+				</h2>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 '>
+					{evolutionItems.map((item, index) => (
+						<div className='slidBox  relative p-[1px] rounded-lg' key={index}>
+						</div>
+					))}
+          </div>
+        </div> */}
+		</div>
+	);
 };
 
 export default EvolutionSection;

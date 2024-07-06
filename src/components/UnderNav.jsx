@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function UnderNav() {
 	return (
-		<div className='underNav relative bg-slate-100 element-center gap-[50px] bg-[#000000]'>
+		<div className='underNav relative bg-slate-100  element-center gap-[50px] '>
 			<Link
 				to='/'
 				className='relative  text-base  font-bold hover:text-[#00A448] border-slate-100 py-4 px-3   cursor-pointer group'

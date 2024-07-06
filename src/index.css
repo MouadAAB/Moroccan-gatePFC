@@ -12,10 +12,14 @@
 	}
 }
 
+body {
+	/* padding-top: 15vh */
+	background-color: #f1f5f9;
+}
+
 .logo {
 	font-family: "Dancing Script", cursive;
 }
-
 
 .tooText::before {
 	content: "";
@@ -58,12 +62,12 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", en
 }
 
 .matches {
-	font-family: "Permanent Marker", cursive;
+	/* font-family: "Permanent Marker", cursive; */
 }
 
 /* styles.css */
 
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
   
@@ -76,10 +80,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", en
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 4px; 
-}
-
-
-
+} */
 
 .homebg {
 	/* background: hsla(335, 91%, 70%, 1);
@@ -116,15 +117,63 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F86CA7", en
 
 @keyframes scroll {
 	0% {
-	  transform: translateX(0);
+		transform: translateX(0);
 	}
 	100% {
-	  transform: translateX(-100%);
+		transform: translateX(-100%);
 	}
-  }
-  
-  .animate-scroll {
+}
+
+.animate-scroll {
 	display: flex;
 	animation: scroll 25s linear infinite;
-  }
-  
+}
+
+/* .slidBox {
+	position: relative;
+	width: 500px;
+	height: 400px;
+	
+} */
+.slidBox::before {
+	position: absolute;
+	content: "";
+	inset: 0;
+	/* background: repeating-conic-gradient(from var(--a),red 0%,
+  green 15%,yellow 0%,
+  red 33%); */
+	background: repeating-conic-gradient(from var(--a),gold 0%,
+  black 15%,
+  gold 33%);
+	border-radius: 12px;
+	animation: rotating 8s linear infinite;
+}
+.slidBox::after {
+	position: absolute;
+	content: "";
+	inset: 0;
+	/* background: repeating-conic-gradient(from var(--a),red 0%,
+  green 15%,
+  red 33%); */
+  background: repeating-conic-gradient(from var(--a),gold 0%,
+  black 15%,
+  gold 33%);
+	animation: rotating 8s linear infinite;
+	filter: blur(10px);
+	opacity: 1;
+}
+
+@property --a {
+	syntax: "<angle>";
+	inherits: false;
+	initial-value: 0deg;
+}
+
+@keyframes rotating {
+	0% {
+		--a: 0deg;
+	}
+	100% {
+		--a: 360deg;
+	}
+}

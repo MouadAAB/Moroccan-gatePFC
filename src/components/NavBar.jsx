@@ -47,11 +47,10 @@ export default function NavBar() {
 	return (
 		<nav className=' fixed z-50 w-[100vw] shadow-xl'>
 			<div className='flex items-center md:justify-between   bg-[#000000]   py-2'>
-
-			<div className='logofont pl-3 md:pl-7 logo text-[#ffffff] text-lg lg:text-[20px] lg:w-[33.33%] w-[50%] cursor-pointer'>
+				<div className='logofont pl-3 md:pl-7 logo text-[#ffffff] text-lg lg:text-4xl lg:w-[33.33%] w-[50%] cursor-pointer'>
 					<Link to='/'>Moroccan Gate</Link>
-			</div>
-			{/*<div className='logofont pl-3 md:pl-7 logo text-lg lg:text-[20px] lg:w-[33.33%] w-[50%] cursor-pointer'>
+				</div>
+				{/*<div className='logofont pl-3 md:pl-7 logo text-lg lg:text-[20px] lg:w-[33.33%] w-[50%] cursor-pointer'>
 			<Link to='/'>
 				Moroccan Gate
 				{/*<img src='/src/assets/images/Logo12.png' alt="Moroccan Gate Logo" className='h-8 lg:h-10 inline-block' />
@@ -60,8 +59,8 @@ export default function NavBar() {
 				<div className='hidden lg:inline-flex element-center gap-9 text-[40px] w-[33.33%] '>
 					<Tooltip title='World Cup' enterDelay={500} leaveDelay={200} arrow>
 						<div
-							className={`rounded-[12px]  py-[1px] px-1 cursor-pointer transition-all duration-300 ${
-								worldCup ? "bg-[#00A448]" : "bg-black"
+							className={`rounded-[12px]  py-3 px-3 cursor-pointer transition-all duration-300 ${
+								worldCup ? "bg-[#00A448]" : "bg-white"
 							}`}
 							onClick={() => {
 								setWorldCup(true);
@@ -72,16 +71,16 @@ export default function NavBar() {
 								src='/src/assets/images/yalla-vamos.svg'
 								alt=''
 								width={50}
-								className={`w-11 h-11 transition-all duration-300  ${
-									worldCup && "scale-110 ]"
+								className={` transition-all duration-300  ${
+									worldCup && "scale-125"
 								} `}
 							/>
 						</div>
 					</Tooltip>
 					<Tooltip title='CAF' enterDelay={500} leaveDelay={200} arrow>
 						<div
-							className={`rounded-[12px]  py-[1px] px-1 cursor-pointer transition-all duration-300 ${
-								canCup ? "bg-[#00A448]" : "bg-black"
+							className={`rounded-[12px]  py-1 px-2 cursor-pointer transition-all duration-300 ${
+								canCup ? "bg-[#00A448]" : "bg-white"
 							}`}
 							onClick={() => {
 								setWorldCup(false);
@@ -92,15 +91,15 @@ export default function NavBar() {
 								src='/src/assets/images/file.png'
 								alt=''
 								width={50}
-								className={` w-11 h-11 transition-all duration-300 scale-80   ${
-									canCup && "scale-110 ]"
+								className={` transition-all duration-300 scale-80   ${
+									canCup && "scale-125"
 								} `}
 							/>
 						</div>
 					</Tooltip>
 				</div>
 				<div className='md:pr-7  pr-3 flex justify-end  items-center text-3xl lg:w-[33.33%] w-[50%] gap-2'>
-					<button className='w-fit h-fit font-semibold text-white bg-black rounded-md md:rounded-[11px] md:py-2 py-1 md:px-3 px-2 md:text-lg text-sm hover:text-black transition  duration-500 hover:bg-white'>
+					<button className='w-fit h-fit font-semibold text-black bg-white  fo rounded-md md:rounded-[11px] md:py-2 py-1 md:px-3 px-2 md:text-lg text-sm  transition  duration-500 '>
 						Sign in
 					</button>
 					<div className='bg-slate-100 w-[.9px] h-10'></div>

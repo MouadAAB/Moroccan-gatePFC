@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+	.element-center {
+		@apply flex justify-center items-center;
+	}
+}
+
+body {
+	background-color: #f1f5f9;
+	scroll-behavior: smooth;
+}
+
+.logo {
+	font-family: "Dancing Script", cursive;
+}
+
+.tooText::before {
+	content: "";
+	position: absolute;
+	left: 45%;
+	top: -3%;
+	/* transform: translateX(20%); */
+	transform: rotate(-45deg);
+	border: 9px solid;
+	border-color: #00a448 #00a448 #e7232300 #e7232300;
+}
+.toochat::before {
+	content: "";
+	position: absolute;
+	left: 45%;
+	top: -8%;
+	/* transform: translateX(20%); */
+	transform: rotate(-45deg);
+	border: 9px solid;
+	border-color: #00a448 #00a448 #e7232300 #ec191900;
+}
+
+.logofont {
+	font-family: "Permanent Marker", cursive;
+}
+
+.underNa {
+	box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.42);
+	-webkit-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.42);
+	-moz-box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.42);
+}
+
+.homebg {
+	background: hsla(186, 33%, 94%, 1);
+
+	background: linear-gradient(
+		135deg,
+		hsla(186, 33%, 94%, 1) 0%,
+		hsla(216, 41%, 79%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		135deg,
+		hsla(186, 33%, 94%, 1) 0%,
+		hsla(216, 41%, 79%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		135deg,
+		hsla(186, 33%, 94%, 1) 0%,
+		hsla(216, 41%, 79%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1 );
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.animate-scroll {
+	display: flex;
+	animation: scroll 25s linear infinite;
+}
+
+/* .slidBox {
+	position: relative;
+	width: 500px;
+	height: 400px;
+	
+} */
+.slidBox::before {
+	position: absolute;
+	content: "";
+	inset: 0;
+	/* background: repeating-conic-gradient(from var(--a),red 0%,
+  green 15%,yellow 0%,
+  red 33%); */
+	background: repeating-conic-gradient(
+		from var(--a),
+		#ff0 0%,
+		#000 50%,
+		#0ff 100%
+	);
+	border-radius: 12px;
+	animation: rotating 8s linear infinite;
+}
+.slidBox::after {
+	position: absolute;
+	content: "";
+	inset: 0;
+	/* background: repeating-conic-gradient(from var(--a),red 0%,
+  green 15%,
+  red 33%); */
+	background: repeating-conic-gradient(
+		from var(--a),
+		#ff0 0%,
+		#000 50%,
+		#0ff 100%
+	);
+	animation: rotating 8s linear infinite;
+	filter: blur(10px);
+	opacity: 1;
+}
+
+@property --a {
+	syntax: "<angle>";
+	inherits: false;
+	initial-value: 0deg;
+}
+
+@keyframes rotating {
+	0% {
+		--a: 0deg;
+	}
+	100% {
+		--a: 360deg;
+	}
+}
+
+.stbg {
+	/* background: hsla(146, 100%, 32%, 1);
+
+background: linear-gradient(90deg, hsla(146, 100%, 32%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(146, 100%, 32%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(146, 100%, 32%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", endColorstr="#000000", GradientType=1 ); */
+	/* background: hsla(146, 100%, 32%, 1);
+
+	background: linear-gradient(
+		90deg,
+		hsla(146, 100%, 32%, 1) 22%,
+		hsla(0, 0%, 0%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(146, 100%, 32%, 1) 22%,
+		hsla(0, 0%, 0%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(146, 100%, 32%, 1) 22%,
+		hsla(0, 0%, 0%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", endColorstr="#000000", GradientType=1 ); */
+	background: hsla(146, 100%, 32%, 1);
+
+	background: linear-gradient(
+		90deg,
+		hsla(146, 100%, 32%, 1) 0%,
+		hsla(0, 0%, 80%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(146, 100%, 32%, 1) 0%,
+		hsla(0, 0%, 80%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(146, 100%, 32%, 1) 0%,
+		hsla(0, 0%, 80%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A347", endColorstr="#CCCCCC", GradientType=1 );
+}
+
+.grpBg {
+	background: hsla(210, 40%, 96%, 1);
+
+	background: linear-gradient(
+		90deg,
+		hsla(210, 40%, 96%, 1) 22%,
+		hsla(146, 100%, 32%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(210, 40%, 96%, 1) 22%,
+		#00a347 100%
+	);
+
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(210, 40%, 96%, 1) 22%,
+		hsla(146, 100%, 32%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1F5F9", endColorstr="#00A448", GradientType=1 );
+}
+
+.contactBG {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/wp_gen_04.jpg");
+	/* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/Campo.jpeg"); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.active::before {
+	content: "";
+	position: absolute;
+	top: -20px;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-bottom-right-radius: 20px;
+	box-shadow: 5px 5px 0 5px var(--main-color);
+}
+.active::after {
+	content: "";
+	position: absolute;
+	right: 0px;
+	bottom: -20px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border-top-right-radius: 20px;
+	box-shadow: 5px -5px 0 5px var(--main-color);
+}
+
+.ssbg {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/couverture.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* .cult {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/zelige.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	
+} */
+
+.sideBarCultureBg {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/Tile.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+

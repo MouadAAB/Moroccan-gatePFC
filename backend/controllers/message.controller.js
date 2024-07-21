@@ -1,40 +1,29 @@
-import Conversation from "../models/conversation.model.js";
 import Message from "../models/message.model.js";
-import mongoose from "mongoose";
-import { gerRecieverSocketId, io } from "../socket/socket.js";
+import Server from "../models/server.model.js";
+import { gerRecieverSocketId } from "../socket/socket.js";
+// import { gerRecieverSocketId, io } from "../socket/socket.js";
 
 export const sendMessage = async (req, res) => {
 	try {
 		const { message } = await req.body;
-		const { id: receiverId } = await req.params;
-		const senderId = await req.user._id;
+		const { serverId, senderId } = await req.params;
 
-		let conversation = await Conversation.findOne({
-			participants: { $all: [senderId, receiverId] },
-		});
+		let server = await Server.findOne({ _id: serverId });
 
-		if (!conversation) {
-			conversation = await Conversation.create({
-				participants: [senderId, receiverId],
-			});
-		}
-
+		// console.log(server)
 		const newMessage = new Message({
 			senderId,
-			receiverId,
+			serverId,
 			message,
 		});
 
 		if (newMessage) {
-			conversation.messages.push(newMessage._id);
+			server.messages.push(newMessage._id);
 		}
 
-		// await conversation.save()
-		// await newMessage.save()
+		await Promise.all([newMessage.save(), server.save()]);
 
-		await Promise.all([newMessage.save(), conversation.save()]);
-
-		const recieverSocketId = gerRecieverSocketId(receiverId);
+		const recieverSocketId = gerRecieverSocketId(serverId);
 		if (recieverSocketId) {
 			io.to(recieverSocketId).emit("newMessage", newMessage);
 		}
@@ -48,22 +37,19 @@ export const sendMessage = async (req, res) => {
 
 export const getMessages = async (req, res) => {
 	try {
-		const { id: recieverId } = req.params;
-		// console.log(mongoose.models);
+		const { serverId } = req.params;
+		const servers = await Server.findOne({ _id: serverId }).populate(
+			"messages"
+		);
 
-		const senderId = req.user._id;
-		const conversation = await Conversation.findOne({
-			participants: { $all: [senderId, recieverId] },
-		}).populate("messages");
-
-		if (!conversation) {
+		if (!servers) {
 			res.status(200).json([]);
 			return;
 		}
-		const messages = conversation.messages;
+		const messages = servers.messages;
 		res.status(200).json(messages);
 	} catch (error) {
-		console.log("Error in getMessages controller", error.message);
+		console.log("Error in sing up controller ", error.message);
 		res.status(500).json({ error: "Internal server error" });
 	}
 };

@@ -47,7 +47,7 @@ export default function NavBar() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollY = window.scrollY;
-			if (currentScrollY  > lastScrollY) {
+			if (currentScrollY > lastScrollY) {
 				// Scrolling down
 				setShowNavbar(false);
 			} else {
@@ -73,14 +73,31 @@ export default function NavBar() {
 	// 	});
 	// }, []);
 	return (
-		<nav className=' fixed z-50 w-[100vw] shadow-xl'>
-			<div ref={navBarRef} className={` ${showNavbar ? "block" : "hidden"}`}>
-				<div className='contactBG flex items-center md:justify-between py-1 '>
-					<div className='logofont pl-3 md:pl-7 logo text-[#ffffff]  text-lg lg:text-4xl lg:w-[33.33%] w-[50%] cursor-pointer'>
-						<Link to='/'>Moroccan Gate</Link>
+		<nav className=' fixed z-40 w-[100vw] shadow-xl '>
+			<div
+				ref={navBarRef}
+				className={` ${showNavbar ? "block" : "hidden"} contactBG `}
+			>
+				<div className=' flex items-center md:justify-between py-1  backdrop-filter backdrop-blur-lg backdrop-opacity-100   '>
+					<div className='logofont pl-3  md:pl-7 logo flex  items-start text-[#ffffff]  text-lg lg:text-4xl lg:w-[33.33%] w-[50%] cursor-pointer'>
+						{/* <Link to='/'>
+							<img
+								src='/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/react.svg'
+								alt=''
+								width={400}
+							/> */}
+
+						<Link to='/'>
+							<img
+								src='/src/assets/imagessaad/logo-13.svg'
+								alt=''
+								width={280}
+								className=''
+							/>
+						</Link>
 					</div>
 					<div className='hidden lg:inline-flex element-center gap-9 text-[40px] w-[33.33%] '>
-						<Tooltip title='World Cup' enterDelay={500} leaveDelay={200} arrow>
+						{/* <Tooltip title='World Cup' enterDelay={500} leaveDelay={200} arrow>
 							<div
 								className={`rounded-[12px]  py-3 px-3 cursor-pointer transition-all duration-300 border-black border-2 ${
 									worldCup ? "bg-[#00A448]" : "bg-black"
@@ -99,7 +116,7 @@ export default function NavBar() {
 									} `}
 								/>
 							</div>
-						</Tooltip>
+						</Tooltip> */}
 						<Tooltip title='CAF' enterDelay={500} leaveDelay={200} arrow>
 							<div
 								className={`rounded-[12px]  py-1 px-2 cursor-pointer transition-all duration-300 border-black border-2 ${
@@ -113,7 +130,7 @@ export default function NavBar() {
 								<img
 									src='/src/assets/images/file.png'
 									alt=''
-									width={50}
+									width={42}
 									className={` transition-all duration-300 scale-80   ${
 										canCup && "scale-125"
 									} `}
@@ -121,9 +138,9 @@ export default function NavBar() {
 							</div>
 						</Tooltip>
 					</div>
-					<div className='md:pr-7  pr-3 flex justify-end  items-center text-3xl lg:w-[33.33%] w-[50%] gap-2'>
+					<div className='md:pr-7   pr-3 flex justify-end  items-center text-3xl lg:w-[33.33%] w-[50%] gap-2'>
 						<Link
-							to='/contact/login'
+							to='/events/login'
 							className='w-fit h-fit font-semibold text-black bg-white hover:bg-[#02a95c] hover:text-white border-[#02a95c] border-2  fo rounded-md md:rounded-[11px] md:py-[6px] py-1 md:px-3 px-2 md:text-lg text-sm  transition  duration-300 '
 						>
 							Sign in
@@ -174,7 +191,7 @@ export default function NavBar() {
 					</div>
 				</div>
 			</div>
-			<div className='hidden lg:block'>
+			<div className=' hidden lg:block'>
 				<UnderNav />
 			</div>
 		</nav>

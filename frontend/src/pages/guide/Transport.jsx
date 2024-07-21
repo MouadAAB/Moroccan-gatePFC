@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import culturePath from "../../zustand/cultureState";
 
 const transportOptions = [
 	{
@@ -55,23 +56,25 @@ const transportOptions = [
 ];
 
 const Transport = () => {
+	const { setPath } = culturePath();
+	useEffect(() => {
+		setPath(location.pathname);
+	}, []);
 	const [selectedTransport, setSelectedTransport] = useState(
 		transportOptions[0]
 	);
 
 	return (
-		<div className='min-h-screen flex bg-[#ffffff]'>
-			<aside className='w-1/4 bg-[#012a4a] shadow-lg p-6'>
-				<div className='w-[3%] h-[3%]'></div>
-				<h2 className='text-2xl font-bold mb-14 text-[#ffffff] text-center'>
+		<div className='min-h-[87vh] flex bg-[#ffffff]'>
+			<div className='w-1/4 bg-[#012a4a] flex flex-col '>
+				<div className='text-2xl h-[30%] element-center font-bold text-[#ffffff] text-center'>
 					Moyens de Transport
-				</h2>
-				<ul>
+				</div>
 					{transportOptions.map((option, index) => (
-						<li key={index} className='mb-2'>
+						<div key={index} className='mx-3 my-1'>
 							<button
 								onClick={() => setSelectedTransport(option)}
-								className={`w-full text-center p-2 rounded-md ${
+								className={`w-full text-center text-black p-2 rounded-md ${
 									selectedTransport.name === option.name
 										? "bg-[#89c2d9]"
 										: "bg-gray-100"
@@ -79,12 +82,10 @@ const Transport = () => {
 							>
 								{option.name}
 							</button>
-						</li>
+						</div>
 					))}
-				</ul>
-			</aside>
-			<main className='flex-1 p-6'>
-				<div className='w-[3%] h-[3%]'></div>
+			</div>
+			<main className='flex-1 m-3 element-center '>
 				<div className='bg-[#012a4a] rounded-lg shadow-lg p-6'>
 					<div className='flex justify-center'>
 						<img

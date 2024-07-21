@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 
 export default function Stadiums() {
 	return (
-		<div className=' py-10 '>
-			<h2 className='text-3xl font-bold text-center text-black mb-6'>
+		<div className=' py-10  '>
+			<h2 className='text-3xl  font-bold text-center text-black mb-6'>
 				Moroccan Stadiums
 			</h2>
 			{/* <Swiper
@@ -103,8 +103,8 @@ export default function Stadiums() {
 				</SwiperSlide>
 			</Swiper> */}
 			<div className=' element-center w-[90%] m-auto h-[45vh]  gap-7'>
-				<div className='slidBox relative w-[33.33%] h-[100%]'>
-					<div className=' py-4 w-full h-full bg-[#FEE334] px-4 absolute z-10 rounded-lg flex flex-col items-center'>
+				<div className='sliderShadow  w-[33.33%] h-full rounded-xl'>
+					<div className=' py-4 w-full h-full bg-[#FEE334] px-4  z-10 rounded-xl flex flex-col items-center'>
 						<div className='text-xl font-extrabold text-center text-black mb-3 '>
 							Stade de Marrakech
 						</div>
@@ -120,8 +120,8 @@ export default function Stadiums() {
 						</div>
 					</div>
 				</div>
-				<div className='slidBox relative w-[33.33%] h-[100%]'>
-					<div className=' py-4 w-full h-full bg-[#FEE334] px-4 absolute z-10 rounded-lg flex flex-col items-center'>
+				<div className='sliderShadow  w-[33.33%] h-full rounded-xl'>
+					<div className=' py-4 w-full h-full bg-[#FEE334] px-4  z-10 rounded-xl flex flex-col items-center'>
 						<div className='text-xl font-extrabold text-center text-black mb-3 '>
 							MOHAMMED V CasaBlanca
 						</div>
@@ -137,8 +137,8 @@ export default function Stadiums() {
 						</div>
 					</div>
 				</div>
-				<div className='slidBox relative w-[33.33%] h-[100%]'>
-					<div className=' py-4 w-full h-full bg-[#FEE334]  px-4 absolute z-10 rounded-lg flex flex-col items-center'>
+				<div className='sliderShadow  w-[33.33%] h-full rounded-xl'>
+					<div className=' py-4 w-full h-full bg-[#FEE334]  px-4  z-10 rounded-xl flex flex-col items-center'>
 						<div className='text-xl font-extrabold text-center text-black  mb-3'>
 							Moulay Abdallah Complex
 						</div>
@@ -184,27 +184,9 @@ export default function Stadiums() {
 					</p>
 				</div> */}
 			</div>
-			<div className=' mx-auto mt-8 font-semibold cursor-pointer tracking-wider w-fit h-fit rounded-3xl border-2 bg-white border-[#00A448] transiton duration-300 hover:bg-[#00A448] text-[#00A448] hover:text-white px-4 py-2'>
+			<div className=' mx-auto mt-8 font-semibold cursor-pointer tracking-wider w-fit h-fit rounded-3xl border-2 bg-white border-[#00A448] transiton duration-300 hover:bg-[#00A448] text-[#00A448] hover:text-white px-8 py-2'>
 				<Link to='/guide/terrain'>Show More</Link>
 			</div>
 		</div>
 	);
 }
-
-<div className='card w-72 h-80  '>
-	<div className='back p-10'>
-		<div className='back-content bg-[#1B1B1B] '>
-			<div className='text-white  font-semibold text-3xl w-full h-fit text-center'>
-				Réparation
-			</div>
-			<div className=' w-full  h-fit flex  justify-center m-2'>
-				{/* <GiAutoRepair className='text-yellow-300  text-7xl' /> */}
-			</div>
-			<div className='text-white  text-sm text-center'>
-				Nous avons des mécaniciens de moto qualifiés et expérimentés pour
-				évaluer et corriger vos problèmes. Nous proposons des réparations, des
-				ajustements et des remplacements de pièces rapides et efficaces.
-			</div>
-		</div>
-	</div>
-</div>;

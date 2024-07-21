@@ -1,7 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-
 export default function Matches() {
 	return (
 		<div className='matches  h-full   w-[25%] pt-7 pl-6'>
@@ -42,11 +41,11 @@ export default function Matches() {
 						<div className='w-full element-center rounded-lg bg-white'>
 							<div className='w-[92%] h-fit  flex justify-evenly py-2  items-center pl-2'>
 								<div className='element-center gap-1'>
-									<span className='font-semibold text-lg'>Egy</span>
+									<span className='font-semibold text-lg'>Mar</span>
 									<img
-										src='/src/assets/images/egypt-flag.png'
+										src='/src/assets/images/Flag_of_Morocco.png'
 										alt='Egypt Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
 								</div>
 								<span className='text-gray-500 border-2 px-2 rounded-md'>
@@ -54,11 +53,14 @@ export default function Matches() {
 								</span>
 								<div className='element-center gap-1'>
 									<img
-										src='/src/assets/images/Ethiopia-flag.png'
+										src='/src/assets/images/Benin.png'
 										alt='Ethiopia Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
-									<span className='font-semibold text-lg'>Eth</span>
+									<span className='font-semibold text-lg'>
+										{" "}
+										<span className='font-semibold text-lg'>Ben</span>
+									</span>
 								</div>
 							</div>
 							<div className='w-[8%] text-lg hover:text-[#00A448]'>
@@ -72,11 +74,11 @@ export default function Matches() {
 						<div className='w-full element-center rounded-lg bg-white'>
 							<div className='w-[92%] h-fit  flex justify-evenly py-2  items-center pl-2'>
 								<div className='element-center gap-1'>
-									<span className='font-semibold text-lg'>Egy</span>
+									<span className='font-semibold text-lg'>Ang</span>
 									<img
-										src='/src/assets/images/egypt-flag.png'
+										src='/src/assets/images/Angola.png'
 										alt='Egypt Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
 								</div>
 								<span className='text-gray-500 border-2 px-2 rounded-md'>
@@ -84,11 +86,11 @@ export default function Matches() {
 								</span>
 								<div className='element-center gap-1'>
 									<img
-										src='/src/assets/images/Ethiopia-flag.png'
+										src='/src/assets/images/Algeria.png'
 										alt='Ethiopia Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
-									<span className='font-semibold text-lg'>Eth</span>
+									<span className='font-semibold text-lg'>Alg</span>
 								</div>
 							</div>
 							<div className='w-[8%] text-lg hover:text-[#00A448]'>
@@ -99,11 +101,11 @@ export default function Matches() {
 						<div className='w-full element-center rounded-lg bg-white'>
 							<div className='w-[92%] h-fit  flex justify-evenly py-2  items-center pl-2'>
 								<div className='element-center gap-1'>
-									<span className='font-semibold text-lg'>Egy</span>
+									<span className='font-semibold text-lg'>Cha</span>
 									<img
-										src='/src/assets/images/egypt-flag.png'
+										src='/src/assets/images/Chad.png'
 										alt='Egypt Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
 								</div>
 								<span className='text-gray-500 border-2 px-2 rounded-md'>
@@ -111,11 +113,11 @@ export default function Matches() {
 								</span>
 								<div className='element-center gap-1'>
 									<img
-										src='/src/assets/images/Ethiopia-flag.png'
+										src='/src/assets/images/Cameroon.png'
 										alt='Ethiopia Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
-									<span className='font-semibold text-lg'>Eth</span>
+									<span className='font-semibold text-lg'>Cam</span>
 								</div>
 							</div>
 							<div className='w-[8%] text-lg hover:text-[#00A448]'>
@@ -129,11 +131,11 @@ export default function Matches() {
 						<div className='w-full element-center rounded-lg bg-white'>
 							<div className='w-[92%] h-fit  flex justify-evenly py-2  items-center pl-2'>
 								<div className='element-center gap-1'>
-									<span className='font-semibold text-lg'>Egy</span>
+									<span className='font-semibold text-lg'>Gab</span>
 									<img
-										src='/src/assets/images/egypt-flag.png'
+										src='/src/assets/images/Gabon.png'
 										alt='Egypt Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
 								</div>
 								<span className='text-gray-500 border-2 px-2 rounded-md'>
@@ -141,9 +143,35 @@ export default function Matches() {
 								</span>
 								<div className='element-center gap-1'>
 									<img
-										src='/src/assets/images/Ethiopia-flag.png'
+										src='/src/assets/images/Ghana.png'
 										alt='Ethiopia Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
+									/>
+									<span className='font-semibold text-lg'>Gna</span>
+								</div>
+							</div>
+							<div className='w-[8%] text-lg hover:text-[#00A448]'>
+								<FaArrowRightLong />
+							</div>
+						</div>
+						<div className='w-full element-center rounded-lg bg-white'>
+							<div className='w-[92%] h-fit  flex justify-evenly py-2  items-center pl-2'>
+								<div className='element-center gap-1'>
+									<span className='font-semibold text-lg'>Egy</span>
+									<img
+										src="/src/assets/images/DR-Congo.png"
+										alt='Egypt Flag'
+										className='w-6 h-4'
+									/>
+								</div>
+								<span className='text-gray-500 border-2 px-2 rounded-md'>
+									vs
+								</span>
+								<div className='element-center gap-1'>
+									<img
+										src="/src/assets/images/Guinea-Bissau.png"
+										alt='Ethiopia Flag'
+										className='w-6 h-4'
 									/>
 									<span className='font-semibold text-lg'>Eth</span>
 								</div>
@@ -158,9 +186,9 @@ export default function Matches() {
 								<div className='element-center gap-1'>
 									<span className='font-semibold text-lg'>Egy</span>
 									<img
-										src='/src/assets/images/egypt-flag.png'
+										src="/src/assets/images/South-Africa.png"
 										alt='Egypt Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
 								</div>
 								<span className='text-gray-500 border-2 px-2 rounded-md'>
@@ -168,38 +196,11 @@ export default function Matches() {
 								</span>
 								<div className='element-center gap-1'>
 									<img
-										src='/src/assets/images/Ethiopia-flag.png'
+										src="/src/assets/images/Senegal.png"
 										alt='Ethiopia Flag'
-										className='w-6 h-6'
+										className='w-6 h-4'
 									/>
-									<span className='font-semibold text-lg'>Eth</span>
-								</div>
-							</div>
-							<div className='w-[8%] text-lg hover:text-[#00A448]'>
-								{/* <FaArrowRight /> */}
-								<FaArrowRightLong />
-							</div>
-						</div>
-						<div className='w-full element-center rounded-lg bg-white'>
-							<div className='w-[92%] h-fit  flex justify-evenly py-2  items-center pl-2'>
-								<div className='element-center gap-1'>
-									<span className='font-semibold text-lg'>Egy</span>
-									<img
-										src='/src/assets/images/egypt-flag.png'
-										alt='Egypt Flag'
-										className='w-6 h-6'
-									/>
-								</div>
-								<span className='text-gray-500 border-2 px-2 rounded-md'>
-									vs
-								</span>
-								<div className='element-center gap-1'>
-									<img
-										src='/src/assets/images/Ethiopia-flag.png'
-										alt='Ethiopia Flag'
-										className='w-6 h-6'
-									/>
-									<span className='font-semibold text-lg'>Eth</span>
+									<span className='font-semibold text-lg'>Sen</span>
 								</div>
 							</div>
 							<div className='w-[8%] text-lg hover:text-[#00A448]'>

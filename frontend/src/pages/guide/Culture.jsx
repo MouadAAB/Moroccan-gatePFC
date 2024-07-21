@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
+import culturePath from "../../zustand/cultureState";
 
 const Culture = () => {
+	const { setPath } = culturePath();
 	const sectionsRef = useRef([]);
 	const sectionRef = useRef();
 	const linksRef = useRef([]);
@@ -13,14 +16,6 @@ const Culture = () => {
 		"Vêtements Traditionnels",
 		"Sports et Jeux Traditionnels",
 	];
-	const colors = [
-		"#5D190F",
-		"#9c6644",
-		"#ddb892",
-		"#CCCCCC",
-		"#E0CDA9",
-		"#370028",
-	];
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -31,7 +26,6 @@ const Culture = () => {
 				const id = section.getAttribute("id");
 
 				if (scrollPosition >= offset && scrollPosition < offset + height) {
-					console.log("hana hena");
 					setActiveLink(id);
 				}
 			});
@@ -42,6 +36,12 @@ const Culture = () => {
 			// sectionRef.current.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
+
+	const location = useLocation();
+	useEffect(() => {
+
+		setPath(location.pathname);
+	},[]);
 	return (
 		<>
 			<div className=' flex'>
@@ -49,13 +49,11 @@ const Culture = () => {
 					<nav className='gap-4  flex flex-col   w-full   '>
 						{sections.map((section, idx) => (
 							<a
-								style={{ "--main-color": ` ${colors[idx]}` }}
+								// style={{ "--main-color": ` ${colors[idx]}` }}
 								key={idx}
 								href={`#${section}`}
 								className={`${
-									activeLink === section
-										? `active bg-[${colors[idx]}]`
-										: console.log(activeLink)
+									activeLink === section ? `active bg-[#6C946F]` : ""
 								} relative py-5 px-3 text-black font-[600]  `}
 								ref={(el) => (linksRef.current[idx] = el)}
 							>
@@ -68,9 +66,9 @@ const Culture = () => {
 					<section
 						ref={(el) => (sectionsRef.current[0] = el)}
 						id="Artisanat et Métiers d'Art"
-						className='cult w-full h-fit bg-[#5D190F] pt-16 pb-8 flex flex-col gap-5'
+						className='cult w-full h-fit bg-[#6C946F] pt-16 pb-8 flex flex-col gap-5'
 					>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={400}
@@ -97,7 +95,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={700}
@@ -121,7 +119,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -151,9 +149,9 @@ const Culture = () => {
 					<section
 						ref={(el) => (sectionsRef.current[1] = el)}
 						id='Architecture et Sites Historiques'
-						className='w-full h-fit bg-[#9c6644] pt-16 pb-8 flex flex-col gap-5'
+						className='w-full h-fit bg-[#6C946F] pt-16 pb-8 flex flex-col gap-5'
 					>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -182,7 +180,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -208,7 +206,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -240,9 +238,9 @@ const Culture = () => {
 					<section
 						ref={(el) => (sectionsRef.current[2] = el)}
 						id='Festivals'
-						className='w-full h-fit bg-[#ddb892] pt-16 pb-8 flex flex-col gap-5'
+						className='w-full h-fit bg-[#6C946F] pt-16 pb-8 flex flex-col gap-5'
 					>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -267,7 +265,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -296,9 +294,9 @@ const Culture = () => {
 					<section
 						ref={(el) => (sectionsRef.current[3] = el)}
 						id='Littérature et Poésie'
-						className='w-full h-fit bg-[#CCCCCC] pt-16 pb-8 flex flex-col gap-5'
+						className='w-full h-fit bg-[#6C946F] pt-16 pb-8 flex flex-col gap-5'
 					>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -327,7 +325,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -354,7 +352,7 @@ const Culture = () => {
 							</div>
 						</div>
 
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -382,9 +380,9 @@ const Culture = () => {
 					<section
 						ref={(el) => (sectionsRef.current[4] = el)}
 						id='Vêtements Traditionnels'
-						className='w-full h-fit bg-[#E0CDA9] pt-16 pb-8 flex flex-col gap-5'
+						className='w-full h-fit bg-[#6C946F] pt-16 pb-8 flex flex-col gap-5'
 					>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -407,7 +405,7 @@ const Culture = () => {
 							</div>
 						</div>
 
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -432,7 +430,7 @@ const Culture = () => {
 							</div>
 						</div>
 
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -460,9 +458,9 @@ const Culture = () => {
 					<section
 						ref={(el) => (sectionsRef.current[5] = el)}
 						id='Sports et Jeux Traditionnels'
-						className='w-full h-fit bg-[#370028] pt-16 pb-8 flex flex-col gap-5'
+						className='w-full h-fit bg-[#6C946F] pt-16 pb-8 flex flex-col gap-5'
 					>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -490,7 +488,7 @@ const Culture = () => {
 							</div>
 						</div>
 
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -511,7 +509,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}
@@ -532,7 +530,7 @@ const Culture = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#E5AD76] mx-auto rounded-2xl text-black py-2 px-2'>
+						<div className='w-[85%] h-[35%] element-center gap-4 bg-[#e9d9b2] mx-auto rounded-2xl text-black py-2 px-2'>
 							<div className='w-[30%] element-center'>
 								<img
 									width={500}

@@ -90,24 +90,15 @@ body {
 	animation: scroll 25s linear infinite;
 }
 
-/* .slidBox {
-	position: relative;
-	width: 500px;
-	height: 400px;
-	
-} */
 .slidBox::before {
 	position: absolute;
 	content: "";
 	inset: 0;
-	/* background: repeating-conic-gradient(from var(--a),red 0%,
-  green 15%,yellow 0%,
-  red 33%); */
 	background: repeating-conic-gradient(
 		from var(--a),
-		#ff0 0%,
+		black 0%,
 		#000 50%,
-		#0ff 100%
+		black 100%
 	);
 	border-radius: 12px;
 	animation: rotating 8s linear infinite;
@@ -116,14 +107,11 @@ body {
 	position: absolute;
 	content: "";
 	inset: 0;
-	/* background: repeating-conic-gradient(from var(--a),red 0%,
-  green 15%,
-  red 33%); */
 	background: repeating-conic-gradient(
 		from var(--a),
-		#ff0 0%,
+		black 0%,
 		#000 50%,
-		#0ff 100%
+		black 100%
 	);
 	animation: rotating 8s linear infinite;
 	filter: blur(10px);
@@ -146,36 +134,6 @@ body {
 }
 
 .stbg {
-	/* background: hsla(146, 100%, 32%, 1);
-
-background: linear-gradient(90deg, hsla(146, 100%, 32%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(146, 100%, 32%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(146, 100%, 32%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", endColorstr="#000000", GradientType=1 ); */
-	/* background: hsla(146, 100%, 32%, 1);
-
-	background: linear-gradient(
-		90deg,
-		hsla(146, 100%, 32%, 1) 22%,
-		hsla(0, 0%, 0%, 1) 100%
-	);
-
-	background: -moz-linear-gradient(
-		90deg,
-		hsla(146, 100%, 32%, 1) 22%,
-		hsla(0, 0%, 0%, 1) 100%
-	);
-
-	background: -webkit-linear-gradient(
-		90deg,
-		hsla(146, 100%, 32%, 1) 22%,
-		hsla(0, 0%, 0%, 1) 100%
-	);
-
-	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", endColorstr="#000000", GradientType=1 ); */
 	background: hsla(146, 100%, 32%, 1);
 
 	background: linear-gradient(
@@ -224,10 +182,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", en
 }
 
 .contactBG {
-	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
 		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/wp_gen_04.jpg");
-	/* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/Campo.jpeg"); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -242,7 +198,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", en
 	height: 20px;
 	background: transparent;
 	border-bottom-right-radius: 20px;
-	box-shadow: 5px 5px 0 5px var(--main-color);
+	box-shadow: 5px 5px 0 5px #6C946F;
 }
 .active::after {
 	content: "";
@@ -253,7 +209,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", en
 	height: 20px;
 	background: transparent;
 	border-top-right-radius: 20px;
-	box-shadow: 5px -5px 0 5px var(--main-color);
+	box-shadow: 5px -5px 0 5px #6C946F;
 }
 
 .ssbg {
@@ -264,21 +220,18 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00A448", en
 	background-position: center;
 }
 
-/* .cult {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/zelige.jpg");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-	
-} */
 
-.sideBarCultureBg {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/Tile.jpeg");
+.sliderShadow {
+	box-shadow: 15px 18px 15px -8px rgba(0, 0, 0, 0.84);
+	-webkit-box-shadow: 15px 18px 15px -8px rgba(0, 0, 0, 0.84);
+	-moz-box-shadow: 15px 18px 15px -8px rgba(0, 0, 0, 0.84);
+}
+
+
+.slid1BG {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+		url("/Users/saadkarim/Desktop/PFC/Moroccan-gatePFC/frontend/src/assets/imagessaad/BARLAMAN.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
-
-

@@ -44,10 +44,12 @@ export default function History() {
 							className='rounded-xl'
 						/>
 						<div className='absolute w-[500px] h-60 flex flex-col justify-center gap-1 bg-[#FEDD03] top-[35%] left-60 '>
-							<div className='text-black font-bold font-sans text-2xl px-5'>
+							<div className='text-black font-extrabold font-sans text-2xl px-5'>
 								1986
 							</div>
-							<div className='text-black text-xl px-5'>World cup</div>
+							<div className='text-black text-xl font-semibold px-5'>
+								World cup
+							</div>
 							<div className='text-black font-normal text-lg  px-5 '>
 								MOROCCO became the first African team to finish top of a group
 								at a World Cup and the first African team to reach the knockout
@@ -65,10 +67,12 @@ export default function History() {
 							className='rounded-xl z-50'
 						/>
 						<div className='absolute w-[500px] h-60 flex flex-col justify-center gap-1 bg-[#FEDD03] top-[35%] left-60 '>
-							<div className='text-black font-bold font-sans text-2xl  px-5'>
+							<div className='text-black font-extrabold font-sans text-2xl  px-5'>
 								1976
 							</div>
-							<div className='text-black text-xl  px-5'>African cup</div>
+							<div className='text-black text-xl font-semibold px-5'>
+								African cup
+							</div>
 							<div className='text-black font-normal text-lg px-5'>
 								One of Africa's most successful national football teams, Morocco
 								won the 1976 African Cup of Nations.
@@ -85,10 +89,12 @@ export default function History() {
 							className='rounded-xl'
 						/>
 						<div className='absolute w-[500px] h-60 flex flex-col justify-center bg-[#FEDD03] gap-1 top-[35%] left-60 '>
-							<div className='text-black font-bold font-sans text-2xl px-5 '>
+							<div className='text-black font-extrabold font-sans text-2xl px-5 '>
 								2022
 							</div>
-							<div className='text-black text-xl  px-5'>World cup QATAR</div>
+							<div className='text-black text-xl  font-semibold px-5'>
+								World cup QATAR
+							</div>
 							<div className='text-black font-normal text-lg px-5'>
 								Morocco defied all expectations at the 2022 FIFA World Cup,
 								topping their group containing Croatia, Canada and Belgium.

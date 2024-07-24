@@ -9,11 +9,14 @@ export default function Chat() {
 		setPath(location.pathname);
 	}, []);
 	return (
-		<div className='element-center h-[87vh] w-full bg-black '>
-			<div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 '>
-				<SideBar />
-				<MessageContainer />
+		<>
+		<title>Events</title>
+			<div className='element-center h-[87vh] w-full  chatBg'>
+				<div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 '>
+					<SideBar />
+					<MessageContainer />
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }

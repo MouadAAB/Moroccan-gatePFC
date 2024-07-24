@@ -79,7 +79,7 @@ export default function MessageContainer() {
 			) : (
 				<div className='w-full h-full flex items-center justify-center'>
 					<button
-						className='text-white rounded-3xl bg-sky-500 p-3'
+						className='text-white rounded-3xl bg-[#00A448] p-3'
 						onClick={handleJoin}
 					>
 						{loading ? (
@@ -99,7 +99,7 @@ const NoChatSelectd = () => {
 	return (
 		<div className='flex items-center justify-center w-full h-full'>
 			<div className='px-4 text-center sm:text-lg md:text-xl text-gray-200 font-semibold flex flex-col items-center gap-2'>
-				<p>Welcome 👋 {authUser.fullName} ❄️</p>
+				<p>Welcome 👋 {authUser.fullName} ⚽️</p>
 				<p>select a chat to start messaging</p>
 				<TiMessages className='text-3xl md:text-6xl text-center' />
 			</div>

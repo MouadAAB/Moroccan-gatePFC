@@ -41,7 +41,7 @@ export default function Message({ mssg, users }) {
 	const { selectedServer } = useServers();
 	const fromMe = mssg?.senderId === authUser._id;
 	const chatClassName = fromMe ? "chat-end" : "chat-start";
-	const bubbleBgColor = fromMe ? "bg-blue-500" : "";
+	const bubbleBgColor = fromMe ? "bg-[#00A448]" : "";
 	const addPic = users.filter((user) => user._id === mssg?.senderId);
 	const profilePicture = fromMe ? authUser.profilePic : addPic[0].profilePic;
 	console.log(addPic[0].profilePic);

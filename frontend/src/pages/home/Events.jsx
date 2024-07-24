@@ -11,7 +11,7 @@ export default function Events() {
 	const displayedEvents = eventsData.slice(0, 3);
 	return (
 		<>
-			<div className='container'>
+			<div className='container' >
 				<div className='font-bold text-center text-3xl text-black'>
 					Upcoming Events
 				</div>

@@ -8,10 +8,10 @@ const SEARCH_QUERIES = ["african cup 2025 in english "];
 const Videos = () => {
 	const [videos, setVideos] = useState([]);
 	const [currentVideo, setCurrentVideo] = useState(null);
-const { setPath } = culturePath();
-useEffect(() => {
-	setPath(location.pathname);
-}, []);
+	const { setPath } = culturePath();
+	useEffect(() => {
+		setPath(location.pathname);
+	}, []);
 	useEffect(() => {
 		const fetchVideos = async () => {
 			try {
@@ -43,50 +43,53 @@ useEffect(() => {
 	}
 
 	return (
-		<div className='bg-slate-100 min-h-screen py-8 background'>
-			<div className='container mx-auto px-4'>
-				<h1 className='text-4xl font-bold mb-8 text-left text-black'>
-					Video Highlights
-				</h1>
-				<div className='flex gap-6'>
-					<div className='flex-1'>
-						<div className='relative'>
-							<iframe
-								src={currentVideo.videoUrl}
-								frameBorder='0'
-								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-								allowFullScreen
-								className='w-full h-[470px] rounded-lg shadow-lg video-player'
-							></iframe>
+		<>
+			<title>Videos</title>
+			<div className='bg-slate-100 min-h-screen py-8 background'>
+				<div className='container mx-auto px-4'>
+					<h1 className='text-4xl font-bold mb-8 text-left text-black'>
+						Video Highlights
+					</h1>
+					<div className='flex gap-6'>
+						<div className='flex-1'>
+							<div className='relative'>
+								<iframe
+									src={currentVideo.videoUrl}
+									frameBorder='0'
+									allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+									allowFullScreen
+									className='w-full h-[470px] rounded-lg shadow-lg video-player'
+								></iframe>
+							</div>
+							<div className='mt-4 text-left text-black text-[30px]'>
+								{currentVideo.title}
+							</div>
 						</div>
-						<div className='mt-4 text-left text-black text-[30px]'>
-							{currentVideo.title}
-						</div>
-					</div>
-					<div className='w-1/4 flex flex-col space-y-4 overflow-y-auto h-[470px] custom-scrollbar'>
-						{videos.map((video, index) => (
-							<div
-								key={index}
-								onClick={() => setCurrentVideo(video)}
-								className='cursor-pointer'
-							>
-								<div className='relative h-[145px]'>
-									<img
-										src={video.thumbnail}
-										alt={video.title}
-										className='w-full h-full object-cover rounded-lg shadow-lg'
-									/>
-									<div className='absolute inset-0 bg-black bg-opacity-25 rounded-lg'></div>
-									<div className='absolute bottom-0 left-0 p-2 bg-black bg-opacity-75 text-white rounded-b-lg w-full text-center'>
-										{video.title}
+						<div className='w-1/4 flex flex-col space-y-4 overflow-y-auto h-[470px] custom-scrollbar'>
+							{videos.map((video, index) => (
+								<div
+									key={index}
+									onClick={() => setCurrentVideo(video)}
+									className='cursor-pointer'
+								>
+									<div className='relative h-[145px]'>
+										<img
+											src={video.thumbnail}
+											alt={video.title}
+											className='w-full h-full object-cover rounded-lg shadow-lg'
+										/>
+										<div className='absolute inset-0 bg-black bg-opacity-25 rounded-lg'></div>
+										<div className='absolute bottom-0 left-0 p-2 bg-black bg-opacity-75 text-white rounded-b-lg w-full text-center'>
+											{video.title}
+										</div>
 									</div>
 								</div>
-							</div>
-						))}
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

@@ -46,8 +46,8 @@ export default function Conversation({ server, lastIndex }) {
 	return (
 		<>
 			<div
-				className={`flex items-center gap-2  hover:bg-sky-500 rounded p-2 py-1 cursor-pointer ${
-					selected ? "bg-sky-500" : ""
+				className={`flex items-center gap-2  hover:bg-[#00A448] rounded p-2 py-1 cursor-pointer ${
+					selected ? "bg-[#00A448]" : ""
 				}`}
 				onClick={handleClick}
 			>

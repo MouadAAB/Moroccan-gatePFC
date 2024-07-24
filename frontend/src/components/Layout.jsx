@@ -16,6 +16,7 @@ import Tickets from "../pages/competition/Tickets";
 import culturePath from "../zustand/cultureState";
 import Footer from "./Footer";
 import GroupStage from "../pages/competition/GroupStage";
+import { Toaster } from "react-hot-toast";
 
 export default function Layout() {
 	const { path } = culturePath();
@@ -59,6 +60,7 @@ export default function Layout() {
 				)}
 				{/* {console.log(path)} */}
 			</div>
+			<Toaster />
 		</BrowserRouter>
 	);
 }

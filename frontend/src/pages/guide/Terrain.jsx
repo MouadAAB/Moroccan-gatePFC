@@ -59,48 +59,7 @@ export default function Terrain() {
 	}, []);
 	return (
 		<>
-			{/* <div className='min-h-screen bg-[#0F5132]'>
-				<div className='relative h-64'>
-					<img
-						className='w-full h-full object-cover'
-						src='/src/assets/images/w3.png'
-						alt='Moroccan Stadiums'
-					/>
-					<div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50'>
-						<h1 className='text-4xl font-bold text-white'>Moroccan Stadiums</h1>
-					</div>
-				</div>
-
-				<div className='container mx-auto'>
-					{stadiums.map((stadium, index) => (
-						<div
-							key={index}
-							className='bg-[#F0FFF0] rounded-lg  my-8 element-center'
-						>
-							<div className=''>
-								<img
-								width={600}
-									className=' rounded-md mb-4'
-									src={stadium.image}
-									alt={stadium.name}
-								/>
-							</div>
-							<div className=''>
-								<h2 className='text-2xl font-bold text-gray-800 mb-2'>
-									{stadium.name}
-								</h2>
-								<p className='text-gray-600'>
-									<strong>Location:</strong> {stadium.location}
-								</p>
-								<p className='text-gray-600'>
-									<strong>Capacity:</strong> {stadium.capacity}
-								</p>
-								<p className='text-gray-600 mt-4'>{stadium.description}</p>
-							</div>
-						</div>
-					))}
-				</div>
-			</div> */}
+			<title>Terrain</title>
 			<div className='min-h-screen w-[100vw] bg-[#0F5132]'>
 				<div className='relative h-64'>
 					<img
@@ -127,14 +86,7 @@ export default function Terrain() {
 								className=' rounded-lg my-2'
 								width={500}
 							/>
-							{/* <div className='md:w-1/2 p-4'>
-								<p className='text-gray-600'>
-									<strong>Location:</strong> {stadium.location}
-								</p>
-								<p className='text-gray-600'>
-									<strong>Capacity:</strong> {stadium.capacity}
-								</p>
-							</div> */}
+
 							<div className='w-full  text-black  my-2'>
 								<div className=''>
 									<span className=' font-semibold '>Location : </span>
@@ -154,34 +106,6 @@ export default function Terrain() {
 					))}
 				</div>
 			</div>
-			{/* {stadiums.map((stadium, index) => (
-				<div key={index} className='grid grid-cols-3 gap-4  h-fit  p-6'>
-					<div className='md:w-1/2 p-4'>
-						<h2 className='text-2xl font-bold text-gray-800 mb-2'>
-							{stadium.name}
-						</h2>
-						<p className='text-gray-600'>
-							<strong>Location:</strong> {stadium.location}
-						</p>
-						<p className='text-gray-600'>
-							<strong>Capacity:</strong> {stadium.capacity}
-						</p>
-						<p className='text-gray-600 mt-4'>{stadium.description}</p>
-					</div>
-					<div className='md:w-1/2 p-4'>
-						<img
-							className='w-full h-84 object-cover rounded-md mb-4'
-							src={stadium.image}
-							alt={stadium.name}
-						/>
-					</div>
-					<div className='md:w-1/3 p-4'>
-						<p className='text-gray-600'>
-							Additional information or text can go here.
-						</p>
-					</div>
-				</div>
-			))} */}
 		</>
 	);
 }

@@ -44,6 +44,7 @@ const Culture = () => {
 	},[]);
 	return (
 		<>
+		<title>Culutre</title>
 			<div className=' flex'>
 				<div className=' relative w-[15%]  flex items-center '>
 					<nav className='gap-4  flex flex-col   w-full   '>

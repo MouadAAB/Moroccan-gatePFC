@@ -65,11 +65,13 @@ const Transport = () => {
 	);
 
 	return (
-		<div className='min-h-[87vh] flex bg-[#ffffff]'>
-			<div className='w-1/4 bg-[#012a4a] flex flex-col '>
-				<div className='text-2xl h-[30%] element-center font-bold text-[#ffffff] text-center'>
-					Moyens de Transport
-				</div>
+		<>
+			<title>Transport</title>
+			<div className='min-h-[87vh] flex bg-[#ffffff]'>
+				<div className='w-1/4 bg-[#012a4a] flex flex-col '>
+					<div className='text-2xl h-[30%] element-center font-bold text-[#ffffff] text-center'>
+						Moyens de Transport
+					</div>
 					{transportOptions.map((option, index) => (
 						<div key={index} className='mx-3 my-1'>
 							<button
@@ -84,32 +86,35 @@ const Transport = () => {
 							</button>
 						</div>
 					))}
-			</div>
-			<main className='flex-1 m-3 element-center '>
-				<div className='bg-[#012a4a] rounded-lg shadow-lg p-6'>
-					<div className='flex justify-center'>
-						<img
-							className='w-84 h-64 object-cover rounded-md mb-4'
-							src={selectedTransport.image}
-							alt={selectedTransport.name}
-						/>
-					</div>
-					<h3 className='text-2xl text-[#ffffff] text-center font-bold mb-2'>
-						{selectedTransport.name}
-					</h3>
-
-					<p className='text-[#ffffff] mb-4'>{selectedTransport.description}</p>
-					<a
-						href={selectedTransport.link}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='text-[#f9c74f] hover:underline'
-					>
-						{selectedTransport.linkText}
-					</a>
 				</div>
-			</main>
-		</div>
+				<main className='flex-1 m-3 element-center '>
+					<div className='bg-[#012a4a] rounded-lg shadow-lg p-6'>
+						<div className='flex justify-center'>
+							<img
+								className='w-84 h-64 object-cover rounded-md mb-4'
+								src={selectedTransport.image}
+								alt={selectedTransport.name}
+							/>
+						</div>
+						<h3 className='text-2xl text-[#ffffff] text-center font-bold mb-2'>
+							{selectedTransport.name}
+						</h3>
+
+						<p className='text-[#ffffff] mb-4'>
+							{selectedTransport.description}
+						</p>
+						<a
+							href={selectedTransport.link}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='text-[#f9c74f] hover:underline'
+						>
+							{selectedTransport.linkText}
+						</a>
+					</div>
+				</main>
+			</div>
+		</>
 	);
 };
 

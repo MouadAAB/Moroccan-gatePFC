@@ -7,6 +7,7 @@ import "swiper/css/autoplay";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import { Autoplay, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function NewsSlider() {
 	return (
@@ -52,7 +53,7 @@ export default function NewsSlider() {
 									<br /> CAF Maroc 2025
 								</div>
 								<button className='bg-[#FBB117] hover:bg-[#F0FFF0] text-[#0F5132] font-bold py-2 px-4 rounded'>
-									<a href='/competition/groupstages'>Voir Plus</a>
+									<Link to='/competition/groupstages'>Voir Plus</Link>
 								</button>
 							</div>
 					</SwiperSlide>

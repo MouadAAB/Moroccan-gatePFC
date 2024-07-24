@@ -72,47 +72,50 @@ const Tickets = () => {
 		setPath(location.pathname);
 	}, []);
 	return (
-		<div className='tickets-container p-4 bg-gray-100 min-h-screen'>
-			<div className='top-nav flex justify-end mb-4'>
-				<button
-					onClick={handlePrevClick}
-					className='arrow-button bg-gray-300 p-2 rounded hover:bg-gray-400'
-				>
-					&#8592;
-				</button>
-				<button
-					onClick={handleNextClick}
-					className='arrow-button bg-gray-300 p-2 rounded hover:bg-gray-400 ml-2'
-				>
-					&#8594;
-				</button>
-			</div>
-			<div className='matches-grid grid grid-cols-4 gap-4 mb-4'>
-				{matches.slice(currentIndex, currentIndex + 4).map((match) => (
+		<>
+		<title>Tickets</title>
+			<div className='tickets-container p-4 bg-gray-100 min-h-screen'>
+				<div className='top-nav flex justify-end mb-4'>
 					<button
-						key={match.id}
-						onClick={() => handleMatchClick(match)}
-						className={`match-button p-4 bg-white border rounded shadow hover:bg-gray-200 ${
-							selectedMatch.id === match.id ? "bg-gray-200" : ""
-						}`}
+						onClick={handlePrevClick}
+						className='arrow-button bg-gray-300 p-2 rounded hover:bg-gray-400'
 					>
-						{match.teams}
+						&#8592;
 					</button>
-				))}
-			</div>
-			{selectedMatch && (
-				<div className='match-details bg-white p-6 rounded shadow-lg'>
-					<h2 className='text-2xl font-bold mb-2'>{selectedMatch.teams}</h2>
-					<p className='mb-1'>Date: {selectedMatch.date}</p>
-					<p className='mb-1'>Location: {selectedMatch.location}</p>
-					<p className='mb-1'>Weather: {selectedMatch.weather}</p>
-					<p className='mb-1'>Info: {selectedMatch.info}</p>
-					<button className='buy-ticket-button mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'>
-						Acheter votre ticket maintenant !!
+					<button
+						onClick={handleNextClick}
+						className='arrow-button bg-gray-300 p-2 rounded hover:bg-gray-400 ml-2'
+					>
+						&#8594;
 					</button>
 				</div>
-			)}
-		</div>
+				<div className='matches-grid grid grid-cols-4 gap-4 mb-4'>
+					{matches.slice(currentIndex, currentIndex + 4).map((match) => (
+						<button
+							key={match.id}
+							onClick={() => handleMatchClick(match)}
+							className={`match-button p-4 bg-white border rounded shadow hover:bg-gray-200 ${
+								selectedMatch.id === match.id ? "bg-gray-200" : ""
+							}`}
+						>
+							{match.teams}
+						</button>
+					))}
+				</div>
+				{selectedMatch && (
+					<div className='match-details bg-white p-6 rounded shadow-lg'>
+						<h2 className='text-2xl font-bold mb-2'>{selectedMatch.teams}</h2>
+						<p className='mb-1'>Date: {selectedMatch.date}</p>
+						<p className='mb-1'>Location: {selectedMatch.location}</p>
+						<p className='mb-1'>Weather: {selectedMatch.weather}</p>
+						<p className='mb-1'>Info: {selectedMatch.info}</p>
+						<button className='buy-ticket-button mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'>
+							Acheter votre ticket maintenant !!
+						</button>
+					</div>
+				)}
+			</div>
+		</>
 	);
 };
 
